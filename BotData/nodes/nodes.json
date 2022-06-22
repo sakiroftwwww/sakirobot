@@ -1,0 +1,350 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "paid",
+      "guid": "62d279e8-f37d-4664-b571-9af3e2b4aa77",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "1152c689-5537-4822-8652-58d2970da9ee"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 131,
+      "y": 341,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "Which-payment",
+      "guid": "81377859-15c0-4459-8fcf-48373c9e9b53",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5588c60f-5091-419b-9b37-98268e2202c3"
+        }
+      ],
+      "x": 380,
+      "y": 576,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Hey! Which payment method you wished? :))\nFor Crypto - Simply Type \"!crypto\"\nFor PayPal - Simply Type \"!paypal\"\nFor Cashapp - Simply Type \"!cashapp\"",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "buy",
+      "guid": "5588c60f-5091-419b-9b37-98268e2202c3",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "81377859-15c0-4459-8fcf-48373c9e9b53"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 160,
+      "y": 592
+    },
+    {
+      "type": "command",
+      "name": "paypal",
+      "guid": "6cbfce6e-7f29-4bd0-ae0d-1d36d218157d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "63f49370-eb12-4f7c-9a76-b86c84aad5a8"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 149,
+      "y": 794
+    },
+    {
+      "type": "response",
+      "name": "paypalhow",
+      "guid": "63f49370-eb12-4f7c-9a76-b86c84aad5a8",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6cbfce6e-7f29-4bd0-ae0d-1d36d218157d"
+        }
+      ],
+      "x": 367,
+      "y": 798,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "**Alright! You can send the package price to \"sakiropaypal@gmail.com\", after sending simply type \"!paid\" and ill proceed.. :))**",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "crypto",
+      "guid": "1f2b4696-d5b0-4a4c-9d6a-d00842a2194a",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "7a815ae1-0349-4024-a584-e31aa1b87c01"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 146,
+      "y": 975
+    },
+    {
+      "type": "response",
+      "name": "cryptohow",
+      "guid": "7a815ae1-0349-4024-a584-e31aa1b87c01",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1f2b4696-d5b0-4a4c-9d6a-d00842a2194a"
+        }
+      ],
+      "x": 357,
+      "y": 960,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "**Alright! You can send the crypto as \"package price\" to one of these addresses,**\n`BTC - bc1qlsa78g3qmwa7l9nu23e9x9l9hfzpdfqju4gqnv\nLTC - LQuXo77gb7brF4bVuB382EobuAnUnMMMxr\nETH - 0x28522f19C667d5ffB59333487DC75389248Aa23F`\n\n**after sending simply type \"!paid\" and ill proceed.. :)\nif you need any other crypto wallets, DM @Sakiro#9999**",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "cashapp",
+      "guid": "ab3aaa1b-e3e0-4754-8c52-93d7e3689cb9",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "7bb3b087-f3a0-4ace-a4f4-4fb24d6ea951"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 153,
+      "y": 1114
+    },
+    {
+      "type": "response",
+      "name": "cashapphow",
+      "guid": "7bb3b087-f3a0-4ace-a4f4-4fb24d6ea951",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "ba1c1d27-9828-4856-88c8-9acfc0fbf2aa"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ab3aaa1b-e3e0-4754-8c52-93d7e3689cb9"
+        }
+      ],
+      "x": 365,
+      "y": 1105,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "**Alright! @Sakiro#9999 will assist you soon! :))**",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "paidused",
+      "guid": "1152c689-5537-4822-8652-58d2970da9ee",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "8c246021-fcf5-47d9-98b3-e84e64eb4b50"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "62d279e8-f37d-4664-b571-9af3e2b4aa77"
+        }
+      ],
+      "x": 357,
+      "y": 334,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "**Thank you for your purchase, <@${dbsVars.CommandAuthor.id}>!** :))<@776162473820422194> will proceed your order now! :))",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "d",
+      "guid": "8c246021-fcf5-47d9-98b3-e84e64eb4b50",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1152c689-5537-4822-8652-58d2970da9ee"
+        }
+      ],
+      "x": 548,
+      "y": 409,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "986642935930040360",
+        "channel <#${dbsVars.CommandChannel.id}> paid.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "dcashapp",
+      "guid": "ba1c1d27-9828-4856-88c8-9acfc0fbf2aa",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7bb3b087-f3a0-4ace-a4f4-4fb24d6ea951"
+        }
+      ],
+      "x": 551,
+      "y": 1128,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "986642935930040360",
+        "channel <#${dbsVars.CommandChannel.id}> awaiting Robux.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}

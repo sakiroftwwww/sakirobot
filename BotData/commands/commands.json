@@ -1,0 +1,100 @@
+{
+  "command": [
+    {
+      "name": "paid",
+      "perms": [],
+      "actions": [
+        {
+          "name": "paidused",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "**Thank you for your purchase, <@${dbsVars.CommandAuthor.id}>!** :))<@776162473820422194> will proceed your order now! :))",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "d",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "986642935930040360",
+          "messagetext": "channel <#${dbsVars.CommandChannel.id}> paid.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "buy",
+      "actions": [
+        {
+          "name": "Which-payment",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Hey! Which payment method you wished? :))\nFor Crypto - Simply Type \"!crypto\"\nFor PayPal - Simply Type \"!paypal\"\nFor Cashapp - Simply Type \"!cashapp\"",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "paypal",
+      "actions": [
+        {
+          "name": "paypalhow",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "**Alright! You can send the package price to \"sakiropaypal@gmail.com\", after sending simply type \"!paid\" and ill proceed.. :))**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "crypto",
+      "actions": [
+        {
+          "name": "cryptohow",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "**Alright! You can send the crypto as \"package price\" to one of these addresses,**\n`BTC - bc1qlsa78g3qmwa7l9nu23e9x9l9hfzpdfqju4gqnv\nLTC - LQuXo77gb7brF4bVuB382EobuAnUnMMMxr\nETH - 0x28522f19C667d5ffB59333487DC75389248Aa23F`\n\n**after sending simply type \"!paid\" and ill proceed.. :)\nif you need any other crypto wallets, DM @Sakiro#9999**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "cashapp",
+      "actions": [
+        {
+          "name": "cashapphow",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "**Alright! <@920861026575069226> will assist you soon! :))**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "dcashapp",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "986642935930040360",
+          "messagetext": "channel <#${dbsVars.CommandChannel.id}> awaiting Cashapp.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}
